@@ -2,6 +2,31 @@
 <search> 
   
   
+    
+    <entry>
+      <title>浅析python中的按位与和逻辑与</title>
+      <link href="/2024/07/19/%E6%B5%85%E6%9E%90python%E4%B8%AD%E7%9A%84%E6%8C%89%E4%BD%8D%E4%B8%8E%E5%92%8C%E9%80%BB%E8%BE%91%E4%B8%8E/"/>
+      <url>/2024/07/19/%E6%B5%85%E6%9E%90python%E4%B8%AD%E7%9A%84%E6%8C%89%E4%BD%8D%E4%B8%8E%E5%92%8C%E9%80%BB%E8%BE%91%E4%B8%8E/</url>
+      
+        <content type="html"><![CDATA[<h1 id="and与-的区别"><a href="#and与-的区别" class="headerlink" title="and与&amp;的区别"></a>and与&amp;的区别</h1><h2 id="1-问题抛出"><a href="#1-问题抛出" class="headerlink" title="1. 问题抛出"></a>1. 问题抛出</h2><p>首先,给出一个问题,下边这段代码输出的内容是什么:</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">res1 = <span class="number">2</span> <span class="keyword">and</span> <span class="number">5</span> </span><br><span class="line">res1_contrast_one = <span class="number">5</span> <span class="keyword">and</span> <span class="number">2</span></span><br><span class="line">res1_contrast_two = <span class="number">5</span> &amp; <span class="number">2</span></span><br><span class="line"></span><br><span class="line">res3 = <span class="number">1</span> &gt;= <span class="number">0</span> <span class="keyword">and</span> -<span class="number">1</span> &gt;= <span class="number">0</span></span><br><span class="line">res4 = (<span class="number">1</span> &gt;= <span class="number">0</span>) &amp; (-<span class="number">1</span> &gt;= <span class="number">0</span>)</span><br><span class="line">res5 = <span class="number">1</span> &gt;= <span class="number">0</span> &amp; -<span class="number">1</span> &gt;= <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(res1, res1_contrast_one, res1_contrast_two, res3, res4, res5)</span><br></pre></td></tr></table></figure><h2 id="2-答案解析"><a href="#2-答案解析" class="headerlink" title="2. 答案解析"></a>2. 答案解析</h2><hr><p>答案揭晓: 5 2 0 False False True</p><hr><p>解释：</p><ol><li>&amp;和and这两个运算符是两种不一样的运算符，&amp;表示按位与，而and表示逻辑与</li><li>逻辑与: 不为0，’’, none的值都认为是True，都是如果符号两边都是不为0的值，则为True，并且and会返回最后一个值</li><li>按位与: 如果是整数,则直接进行位运算。</li><li>&amp;和and这两个运算符的运算顺序也不一样，在python中，() &gt; &amp; &gt; 比较运算符 &gt; and</li></ol><ul><li>有了以上知识点，就很好理解了，<ul><li>res1 表达式的and两边都是True，返回后边的5</li><li>res1_contrast_one返回后边的2</li><li>5&amp;2 5: 101 2:010 刚好与完归零了</li></ul></li><li>而后边三个，就涉及到运算顺序了:<ul><li>res3: 先比较运算符,左边是True,右边是False,则返回False</li><li>res4: 先算小括号的,左边是True,右边是False,则返回False</li><li>res5: 先算按位与&amp;,0&amp;-1 显然是0, 1&gt;&#x3D;0&gt;&#x3D;0 为True</li></ul></li></ul><h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h2><p>开发过程中，主要注意两点:</p><ol><li>and和&amp;是不一样的，一个是逻辑与，一个是按位与</li><li>and和&amp;的运算顺序也是不一样的，并且() &gt; &amp; &gt; 比较运算符 &gt; and</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> python基础语法小细节 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
