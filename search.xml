@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>xxxObjectIsNotCallable</title>
+      <link href="/2024/08/16/xxxObjectIsNotCallable/"/>
+      <url>/2024/08/16/xxxObjectIsNotCallable/</url>
+      
+        <content type="html"><![CDATA[<h1 id="xxx-Object-is-not-callable"><a href="#xxx-Object-is-not-callable" class="headerlink" title="xxx Object is not callable"></a>xxx Object is not callable</h1><p>这篇博客记录一个由于开发中,变量命名不规范导致的一个错误 —— int object is not callable </p><h2 id="1-错误解释："><a href="#1-错误解释：" class="headerlink" title="1. 错误解释："></a>1. 错误解释：</h2><p>int类型的数据是不可调用的，也就是说你的代码中出现了把int类型数据当作函数来调用的情况</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(res))</span><br></pre></td></tr></table></figure><h2 id="2-错误分析"><a href="#2-错误分析" class="headerlink" title="2. 错误分析"></a>2. 错误分析</h2><p>当时pycharm报错定位到这个位置，思来想去，感觉这里也不可能出现这个报错，因为这里就是使用len函数获取list长度并且打印的代码。你们可以猜测是为啥出现 int object is not callable。</p><p>经过排查（排查老久了）发现前边出现了一坨奇怪的代码，也就是这坨，导致了出现这个错误，原因其实很简单。</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">len</span> = res_queue.qsize()</span><br></pre></td></tr></table></figure><p>前边使用了len变量获取队列的长度！！！ 然后导致len变成了int类型对象，在后续len(res)的时候，没有使用默认的len()函数，而是使用了len变量，那一个int类型的变量当然是不能当作函数来调用的。</p><h2 id="3-出现此类错误的排查方向"><a href="#3-出现此类错误的排查方向" class="headerlink" title="3. 出现此类错误的排查方向"></a>3. 出现此类错误的排查方向</h2><p>当然，最好的就是规范代码书写，包括但不限于自定义的变量名，函数名，规范书写可以规避很多低级bug！！</p><ul><li>排查变量名是否冲突</li><li>排查出现错误的函数名是否拼写错误</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> python基础语法小细节 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ctfshow_tenToTwenty</title>
       <link href="/2024/08/13/ctfshow-tenToTwenty/"/>
       <url>/2024/08/13/ctfshow-tenToTwenty/</url>
