@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>MYSQL之数据库初始化</title>
+      <link href="/2024/09/06/mysql-database-initial/"/>
+      <url>/2024/09/06/mysql-database-initial/</url>
+      
+        <content type="html"><![CDATA[<h1 id="初始化数据"><a href="#初始化数据" class="headerlink" title="初始化数据"></a>初始化数据</h1><h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql <span class="comment">--version;        # </span></span><br><span class="line"><span class="keyword">show</span> databases;         # 展示数据库</span><br><span class="line">use database_name;       # 使用或者说进入某个数据库</span><br><span class="line"><span class="keyword">show</span> tables;           # 展示数据库中的表</span><br><span class="line"><span class="keyword">create</span> database DB_name;         # 创建名字为DB_name的数据库 </span><br><span class="line"><span class="keyword">drop</span> database DB_name;          # 删除名字为DB_name的数据库</span><br><span class="line"><span class="keyword">select</span> database();              # 查看当前使用的数据库</span><br><span class="line"><span class="keyword">select</span> version();               # 查看当前数据库的版本</span><br></pre></td></tr></table></figure><h2 id="了解数据表"><a href="#了解数据表" class="headerlink" title="了解数据表"></a>了解数据表</h2><table><thead><tr><th>name</th><th>age</th><th>gender</th></tr></thead><tbody><tr><td>张三</td><td>20</td><td>男</td></tr></tbody></table><p>上述就是一张表，表示数据库存储数据的基本单元，数据都是存储在表对象中的。<br>任何一张表都有行和列：</p><ul><li>行： 记录，一行就是一条记录，就是一条数据</li><li>列： 字段（name字段，age字段）</li></ul><p>每个字段都有一下属性：</p><ul><li>字段名: 比如上述的name age</li><li>字段的数据类型: 比如上述的name字段的数据类型为varchar()  可变字符序列</li><li>字段的数据长度: 每个字段都可能会有长度限制</li><li>字段的约束：某些字段要求该字段下的数据不能重复，不能为空等，用来保证数据表中的数据合法</li></ul><h2 id="开始初始化"><a href="#开始初始化" class="headerlink" title="开始初始化"></a>开始初始化</h2><p>SQL脚本： 编写了sql语句，以.sql结尾的文件就是SQL脚本</p><p>运行脚本：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> xxx.sql</span><br></pre></td></tr></table></figure><p>运行编写好的脚本即可初始化。</p><h2 id="熟悉表结构"><a href="#熟悉表结构" class="headerlink" title="熟悉表结构"></a>熟悉表结构</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">desc</span> dept;            # 查看dept表结构</span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> dept;         # 查询表中数据</span><br></pre></td></tr></table></figure><p>表结构：</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">emp：</span><br><span class="line">+----------+-------------+------+-----+---------+-------+</span><br><span class="line">| Field    | Type        | Null | Key | Default | Extra |</span><br><span class="line">+----------+-------------+------+-----+---------+-------+</span><br><span class="line">| EMPNO    | int         | NO   | PRI | NULL    |       |</span><br><span class="line">| ENAME    | varchar(10) | YES  |     | NULL    |       |</span><br><span class="line">| JOB      | varchar(9)  | YES  |     | NULL    |       |</span><br><span class="line">| MGR      | int         | YES  |     | NULL    |       |</span><br><span class="line">| HIREDATE | date        | YES  |     | NULL    |       |</span><br><span class="line">| SAL      | double(7,2) | YES  |     | NULL    |       |</span><br><span class="line">| COMM     | double(7,2) | YES  |     | NULL    |       |</span><br><span class="line">| DEPTNO   | int         | YES  |     | NULL    |       |</span><br><span class="line">+----------+-------------+------+-----+---------+-------+</span><br><span class="line"></span><br><span class="line">dept:</span><br><span class="line">+--------+-------------+------+-----+---------+-------+</span><br><span class="line">| Field  | Type        | Null | Key | Default | Extra |</span><br><span class="line">+--------+-------------+------+-----+---------+-------+</span><br><span class="line">| DEPTNO | int         | NO   | PRI | NULL    |       |</span><br><span class="line">| DNAME  | varchar(14) | YES  |     | NULL    |       |</span><br><span class="line">| LOC    | varchar(13) | YES  |     | NULL    |       |</span><br><span class="line">+--------+-------------+------+-----+---------+-------+</span><br><span class="line"></span><br><span class="line">salgrade:</span><br><span class="line">+-------+------+------+-----+---------+-------+</span><br><span class="line">| Field | Type | Null | Key | Default | Extra |</span><br><span class="line">+-------+------+------+-----+---------+-------+</span><br><span class="line">| GRADE | int  | YES  |     | NULL    |       |</span><br><span class="line">| LOSAL | int  | YES  |     | NULL    |       |</span><br><span class="line">| HISAL | int  | YES  |     | NULL    |       |</span><br><span class="line">+-------+------+------+-----+---------+-------+</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> mysql </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据库概述</title>
       <link href="/2024/09/06/mysql-overview/"/>
       <url>/2024/09/06/mysql-overview/</url>
