@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>mysql-download</title>
+      <title>mysql的下载与安装</title>
       <link href="/2024/09/06/mysql-download/"/>
       <url>/2024/09/06/mysql-download/</url>
       
@@ -29,7 +29,7 @@
     
     
     <entry>
-      <title>git_plus</title>
+      <title>git的分支操作</title>
       <link href="/2024/09/06/git-plus/"/>
       <url>/2024/09/06/git-plus/</url>
       
@@ -45,7 +45,7 @@
       
         <tags>
             
-            <tag> git java开发 程序员必备工具 </tag>
+            <tag> git </tag>
             
         </tags>
       
@@ -54,7 +54,7 @@
     
     
     <entry>
-      <title>java_overview</title>
+      <title>java概述</title>
       <link href="/2024/09/02/java-overview/"/>
       <url>/2024/09/02/java-overview/</url>
       
@@ -67,7 +67,7 @@
     
     
     <entry>
-      <title>gitOne</title>
+      <title>git的入门操作</title>
       <link href="/2024/08/28/gitOne/"/>
       <url>/2024/08/28/gitOne/</url>
       
@@ -83,7 +83,7 @@
       
         <tags>
             
-            <tag> git </tag>
+            <tag> git java开发 程序员必备工具 </tag>
             
         </tags>
       
@@ -117,7 +117,7 @@
     
     
     <entry>
-      <title>ctfshow_tenToTwenty</title>
+      <title>ctfshow信息收集10-20</title>
       <link href="/2024/08/13/ctfshow-tenToTwenty/"/>
       <url>/2024/08/13/ctfshow-tenToTwenty/</url>
       
@@ -142,7 +142,7 @@
     
     
     <entry>
-      <title>ctfshow_OneToTen</title>
+      <title>ctfshow信息收集1-10</title>
       <link href="/2024/08/12/ctfshow-OneToTen/"/>
       <url>/2024/08/12/ctfshow-OneToTen/</url>
       
