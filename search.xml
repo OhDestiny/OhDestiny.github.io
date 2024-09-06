@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>数据库概述</title>
+      <link href="/2024/09/06/mysql-overview/"/>
+      <url>/2024/09/06/mysql-overview/</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据库概述"><a href="#数据库概述" class="headerlink" title="数据库概述"></a>数据库概述</h1><h2 id="1-数据库（DB-database）"><a href="#1-数据库（DB-database）" class="headerlink" title="1. 数据库（DB database）"></a>1. 数据库（DB database）</h2><ul><li><p>数据库是“按照数据结构来组织，存储和管理数据的仓库”，是一个长期存储在计算机内的，有组织的，可共享的，统一管理的大量数据的集合。<br>数据库并不是随意存放数据的，它具有一定的规则，负责查询的效率会低。</p></li><li><p>数据库中可以存文本，也可以存图像，音乐，声音。</p></li><li><p>其实我们熟悉的excel表 就是一种数据库，但是我们在excel表中操作数据的时候，比较麻烦，需要鼠标点击。而MYSQL这个管理系统则可以直接使用语言操作数据。</p></li></ul><h2 id="2-数据库类型"><a href="#2-数据库类型" class="headerlink" title="2. 数据库类型"></a>2. 数据库类型</h2><h3 id="2-1-关系型数据库"><a href="#2-1-关系型数据库" class="headerlink" title="2.1 关系型数据库"></a>2.1 关系型数据库</h3><ul><li><p>关系型数据库是依据关系模型来创建的数据库，所谓的关系模型就是“一对一，一对多，多对多”等的关系模型，关系模型就是二维表格数据，因而一个关系型数据库就是二维表及其之间的联系组成的数据组织</p></li><li><p>关系型数据可以很好的存储一些关系模型的数据，比如一个老师对应多个学生，一本书对应多个作者，一本书对应一个出版日期。</p></li><li><p>关系模型包括，数据结构（数据存储的问题，二维表），操作指令集合（SQL语句），完整性约束（表内数据约束，表与表之间的约束）</p></li></ul><h3 id="2-2-非关系型数据库-noSQL-not-only-sql"><a href="#2-2-非关系型数据库-noSQL-not-only-sql" class="headerlink" title="2.2 非关系型数据库 noSQL  not only sql"></a>2.2 非关系型数据库 noSQL  not only sql</h3><ul><li>不保证数据ACID特性，但是noSQL数据库种类多，并且去除了关系型数据库的关系型特性，数据之间毫无关系，这样就非常容易扩展，也给架构的层面带来了可扩展的能力，大数据量，高性能，noSQL都有很强的读写能力，得益于无关系性，数据库的结构简单。</li></ul><h2 id="3-数据库管理系统（DBMS-Database-Management-System）"><a href="#3-数据库管理系统（DBMS-Database-Management-System）" class="headerlink" title="3. 数据库管理系统（DBMS Database Management System）"></a>3. 数据库管理系统（DBMS Database Management System）</h2><ul><li><p>它是为了管理数据库而设计的电脑软件系统，一般具有存储，截取，安全保障，备份等基础功能。</p></li><li><p>数据库管理系统是数据库的核心组成部分，主要完成对数据库的操作与管理功能，实现数据库对象的创建，数据库存储数据的查询，添加，修改，和删除操作，以及数据库的用户管理和权限管理等。</p></li><li><p>常见的数据库管理系统有：Mysql, oracle, DB2, MS SQL Server, SQLite, PostgreSQL, Sybase等</p></li></ul><h2 id="4-SQL"><a href="#4-SQL" class="headerlink" title="4. SQL"></a>4. SQL</h2><ul><li><p>SQL(Structured Query Language) 结构化查询语句，是一种特殊目的的编程语言，是一种数据库查询和程序设计语言，用于存取数据以及查询，更新和管理关系数据库系统。</p></li><li><p>结构化查询语言是高级的非过程化编程语言，允许用户在高层数据结构上工作，不要求用户指定对数据的存放方法，也不需要用户了解具体的数据存放方式，所以具有完全不同底层结构的不同数据库系统，可以使用相同的结构化查询语言作为数据输入与管理的接口。结构化查询语言可以嵌套，这使它具有极大的灵活性和强大的功能。</p></li><li><p>sql的分类</p></li></ul><ol><li><p>DQL:<br>Data query langugae(数据查询语言)，带select一般就是</p></li><li><p>DDL:<br>Data defination language(数据定义语言) create alter drop  对表进行操作</p></li><li><p>DML:<br>Data Manipulation language(数据操纵语言)  update delete insert</p></li><li><p>DCL:<br>Data control language(数据控制语言)  grant revoke  授权和撤销权限</p></li><li><p>TPL:<br>Transation Process Language(数据事务管理语言)， 事务的回滚之类 commint rollback</p></li><li><p>CCL:<br>Curcor controller language(指针控制语言)</p></li></ol><h2 id="5-DBMS-SQL-DB的关系"><a href="#5-DBMS-SQL-DB的关系" class="headerlink" title="5. DBMS SQL DB的关系"></a>5. DBMS SQL DB的关系</h2><p>DBMS通过执行SQL完成对DB的数据的操作</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mysql </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mysql的下载与安装</title>
       <link href="/2024/09/06/mysql-download/"/>
       <url>/2024/09/06/mysql-download/</url>
